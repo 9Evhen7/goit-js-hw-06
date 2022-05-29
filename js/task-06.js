@@ -21,3 +21,4 @@ inputEl.addEventListener('blur', (event) => {
         
     }
 });
+

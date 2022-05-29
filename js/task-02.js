@@ -28,3 +28,4 @@ const makeIngredientItem = listOfIngredients => {
 
 const elements = makeIngredientItem(ingredients);
 ingredientsList.append(...elements);
+
