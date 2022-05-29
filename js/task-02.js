@@ -16,10 +16,15 @@ const ingredients = [
 
 const ingredientsList = document.querySelector("#ingredients");
 
+const makeIngredientItem = listOfIngredients => { 
+  return listOfIngredients.map(ingredient => {
+    const ingredientItem = document.createElement("li");
+    ingredientItem.textContent = ingredient;
+    ingredientItem.classList.add("item");
 
-ingredients.forEach(ingredient => {
-  const item = document.createElement("li");
-  item.textContent = ingredient;
-  item.classList.add("item");
-  ingredientsList.append(item);
-});
+    return ingredientItem;
+  });
+}
+
+const elements = makeIngredientItem(ingredients);
+ingredientsList.append(...elements);
